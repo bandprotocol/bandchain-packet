@@ -8,7 +8,7 @@ import (
 	clienttypes "github.com/cosmos/cosmos-sdk/x/ibc/core/02-client/types"
 	channeltypes "github.com/cosmos/cosmos-sdk/x/ibc/core/04-channel/types"
 
-	"github.com/bandprotocol/export-packet/packet"
+	"github.com/bandprotocol/bandchain-packet/packet"
 )
 
 func main() {

@@ -1,10 +1,11 @@
-module github.com/bandprotocol/export-packet
+module github.com/bandprotocol/bandchain-packet
 
 go 1.15
 
 require (
 	github.com/cosmos/cosmos-sdk v0.42.4
 	github.com/gogo/protobuf v1.3.3
+	github.com/stretchr/testify v1.7.0
 	google.golang.org/protobuf v1.26.0
 )
 
