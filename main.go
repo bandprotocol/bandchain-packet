@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	clienttypes "github.com/cosmos/cosmos-sdk/x/ibc/core/02-client/types"
-	channeltypes "github.com/cosmos/cosmos-sdk/x/ibc/core/04-channel/types"
+	clienttypes "github.com/cosmos/ibc-go/modules/core/02-client/types"
+	channeltypes "github.com/cosmos/ibc-go/modules/core/04-channel/types"
 
 	"github.com/bandprotocol/bandchain-packet/packet"
 )
@@ -14,7 +14,7 @@ import (
 func main() {
 	calldata, _ := hex.DecodeString("030000004254436400000000000000")
 	req := packet.OracleRequestPacketData{
-		ClientID:       "test",
+		ClientID:       "",
 		OracleScriptID: 1,
 		Calldata:       calldata,
 		AskCount:       1,
