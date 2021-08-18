@@ -8,7 +8,7 @@ import (
 
 // NewOracleRequestPacketData contructs a new OracleRequestPacketData instance
 func NewOracleRequestPacketData(
-	clientID string, oracleScriptID int64, calldata []byte, askCount uint64, minCount uint64, feeLimit sdk.Coins, requestKey string, prepareGas uint64, executeGas uint64,
+	clientID string, oracleScriptID uint64, calldata []byte, askCount uint64, minCount uint64, feeLimit sdk.Coins, requestKey string, prepareGas uint64, executeGas uint64,
 ) OracleRequestPacketData {
 	return OracleRequestPacketData{
 		ClientID:       clientID,
@@ -29,7 +29,7 @@ func (p OracleRequestPacketData) GetBytes() []byte {
 	return sdk.MustSortJSON(cdc.MustMarshalJSON(&p))
 }
 
-func NewOracleRequestPacketAcknowledgement(requestID int64) *OracleRequestPacketAcknowledgement {
+func NewOracleRequestPacketAcknowledgement(requestID uint64) *OracleRequestPacketAcknowledgement {
 	return &OracleRequestPacketAcknowledgement{
 		RequestID: requestID,
 	}
@@ -37,7 +37,7 @@ func NewOracleRequestPacketAcknowledgement(requestID int64) *OracleRequestPacket
 
 // NewOracleResponsePacketData contructs a new OracleResponsePacketData instance
 func NewOracleResponsePacketData(
-	clientID string, requestID int64, ansCount uint64, requestTime int64,
+	clientID string, requestID uint64, ansCount uint64, requestTime int64,
 	resolveTime int64, resolveStatus ResolveStatus, result []byte,
 ) OracleResponsePacketData {
 	return OracleResponsePacketData{
