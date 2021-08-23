@@ -17,7 +17,6 @@ func NewOracleRequestPacketData(
 		AskCount:       askCount,
 		MinCount:       minCount,
 		FeeLimit:       feeLimit,
-		RequestKey:     requestKey,
 		PrepareGas:     prepareGas,
 		ExecuteGas:     executeGas,
 	}
