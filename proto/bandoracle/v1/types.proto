@@ -1,5 +1,5 @@
 syntax = "proto3";
-package oracle.v1;
+package bandoracle.v1;
 
 option go_package = "github.com/bandprotocol/bandchain-packet/packet";
 
@@ -12,17 +12,17 @@ enum ResolveStatus {
 
   // Open - the request is not yet resolved.
   RESOLVE_STATUS_OPEN_UNSPECIFIED = 0
-      [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_OPEN" ];
+  [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_OPEN" ];
   // Success - the request has been resolved successfully with no errors.
   RESOLVE_STATUS_SUCCESS = 1
-      [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_SUCCESS" ];
+  [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_SUCCESS" ];
   // Failure - an error occured during the request's resolve call.
   RESOLVE_STATUS_FAILURE = 2
-      [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_FAILURE" ];
+  [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_FAILURE" ];
   // Expired - the request does not get enough reports from validator within the
   // timeframe.
   RESOLVE_STATUS_EXPIRED = 3
-      [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_EXPIRED" ];
+  [ (gogoproto.enumvalue_customname) = "RESOLVE_STATUS_EXPIRED" ];
 }
 
 // Result encodes a result of request and store in chain

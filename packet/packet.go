@@ -50,7 +50,7 @@ func NewOracleResponsePacketData(
 	}
 }
 
-// GetBytes returns the bytes representation of this oracle response packet data.
+// GetBytes returns the bytes representation of this bandoracle response packet data.
 func (p OracleResponsePacketData) GetBytes() []byte {
 	cdc := codec.NewProtoCodec(codectypes.NewInterfaceRegistry())
 	return sdk.MustSortJSON(cdc.MustMarshalJSON(&p))
